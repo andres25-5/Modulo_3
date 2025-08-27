@@ -9,6 +9,15 @@ Conceptos aplicados: random.randint(), bucles, diccionarios como contadores, mé
 import random
 
 def simulador_dados(intentos=10000):
+    """ 
+    Esta función simula el lanzamiento de dos dados un número determinado de veces.
+    Cuenta la frecuencia de cada posible suma (de 2 a 12) usando un diccionario.
+    
+    Args:
+        intentos (int): número de veces que se lanzarán los dados
+    Returns:
+        dict: diccionario con la frecuencia de cada suma
+    """
     frecuencias = {}
 
     for _ in range(intentos):

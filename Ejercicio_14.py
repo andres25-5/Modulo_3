@@ -78,9 +78,23 @@ AHORCADO = [
 ]
 
 def elegir_palabra():
+    """ 
+    """
     return random.choice(PALABRAS)
 
 def mostrar_tablero(palabra_secreta, letras_correctas, letras_incorrectas, vidas):
+    """ 
+    Esta función muestra el tablero con el muñeco, palabra y letras intentadas.
+    
+    Args:
+        palabra_secreta (str): palabra secreta
+        letras_correctas (set): conjunto de letras correctas
+        letras_incorrectas (set): conjunto de letras incorrectas
+        vidas (int): número de vidas restantes
+    Returns:    
+        None
+    """
+    
     """Muestra el tablero con el muñeco, palabra y letras intentadas"""
     print(AHORCADO[vidas])  # Dibujo según vidas
     tablero = ""
@@ -91,6 +105,16 @@ def mostrar_tablero(palabra_secreta, letras_correctas, letras_incorrectas, vidas
     print(f"Vidas restantes: {vidas}\n")
 
 def validar_entrada(letra, letras_correctas, letras_incorrectas):
+    """ 
+    Esta función valida la entrada del usuario.
+    
+    Args:
+        letra (str): letra ingresada por el usuario
+        letras_correctas (set): conjunto de letras correctas
+        letras_incorrectas (set): conjunto de letras incorrectas
+    Returns:
+        bool: True si la entrada es válida, False si no
+    """
     if len(letra) != 1 or not letra.isalpha():
         print(" Ingresa solo una letra válida.")
         return False
@@ -100,6 +124,14 @@ def validar_entrada(letra, letras_correctas, letras_incorrectas):
     return True
 
 def jugar():
+    """ 
+    Juega el juego del ahorcado.
+    
+    Args:
+        None
+    Returns:
+        None
+    """
     palabra_secreta = elegir_palabra()
     letras_correctas = set()
     letras_incorrectas = set()

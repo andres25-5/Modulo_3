@@ -6,6 +6,15 @@ Diseña un pequeño juego de aventura basado en texto. El jugador comienza en un
 Conceptos integrados: Bucles, condicionales, manejo de estado con variables, input().
 """
 def aventura():
+    """ 
+    Este es un juego de aventura basado en texto donde el jugador navega por habitaciones y toma decisiones.
+    El juego comienza en una habitación y puede tomar decisiones ('ir al norte', 'abrir cofre'):
+    
+    Args:
+        None
+    Returns:
+        None
+    """
     print("Bienvenido a la Aventura del Castillo Misterioso ")
     print("Estás en una habitación oscura con dos puertas: una al norte y otra al este.\n")
 

@@ -8,6 +8,15 @@ Conceptos aplicados: c, bucles anidados, list comprehensions anidadas.
 
 """
 def transpuesta(matriz):
+    """ 
+    Esta función recibe una matriz y devuelve su transpuesta.
+    La transpuesta se logra intercambiando filas por columnas.
+    
+    Args:
+        matriz (list): lista de listas que representa la matriz
+    Returns:
+        list: lista de listas que representa la matriz transpuesta
+    """
     filas = len(matriz)
     columnas = len(matriz[0])
     resultado = []
@@ -22,6 +31,14 @@ def transpuesta(matriz):
 
 
 def main():
+    """ 
+    Este programa crea una matriz y muestra su transpuesta.
+    
+    Args:
+        None
+    Returns:
+        None
+    """
     m = [[1, 2, 3], [4, 5, 6]]
     print("Matriz original:", m)
     print("Transpuesta (con bucles):", transpuesta(m))

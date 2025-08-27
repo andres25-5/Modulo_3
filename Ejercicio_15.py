@@ -19,6 +19,14 @@ def crear_tablero():
     return [["~" for _ in range(N)] for _ in range(N)]
 
 def colocar_barco():
+    """ 
+    Esta función coloca un barco de 3 casillas horizontal o vertical.
+    
+    Args:
+        None
+    Returns:
+        list: lista de coordenadas de los puntos de disparo
+    """
     """Coloca un barco de 3 casillas horizontal o vertical"""
     orientacion = random.choice(["H", "V"])
     if orientacion == "H":  # Horizontal
@@ -31,12 +39,28 @@ def colocar_barco():
         return [(fila + i, col) for i in range(3)]
 
 def imprimir_tablero(tablero):
+    """ 
+    Esta función muestra el tablero con coordenadas.
+    
+    Args:
+        tablero (list): lista de listas que representa el tablero
+    Returns:    
+        None
+    """
     """Muestra el tablero con coordenadas"""
     print("   " + " ".join(str(i+1) for i in range(N)))
     for i, fila in enumerate(tablero):
         print(chr(65+i) + "  " + " ".join(fila))
 
 def convertir_coordenada(coordenada):
+    """ 
+    Esta función convierte entrada tipo 'A3' en índices (fila, columna).
+    
+    Args:
+        coordenada (str): entrada del usuario
+    Returns:
+        list: lista de dos índices (fila, columna)  
+    """
     """Convierte entrada tipo 'A3' en índices (fila, columna)"""
     try:
         fila = ord(coordenada[0].upper()) - 65
@@ -48,6 +72,14 @@ def convertir_coordenada(coordenada):
     return None
 
 def jugar():
+    """ 
+    Este programa juega al juego de batalla naval.
+    
+    Args:
+        None
+    Returns:
+        None
+    """
     tablero = crear_tablero()
     barco = colocar_barco()
     intentos = 10

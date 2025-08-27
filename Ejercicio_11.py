@@ -9,6 +9,14 @@ Conceptos aplicados: Funciones, bucle while, conversión de tipos (str a int), b
 """
 
 def validar_cedula(cedula: str) -> bool:
+    """ 
+    Esta función valida un número de cédula basado en la regla de que la suma de sus dígitos debe ser un número par.
+    
+    Args:
+        cedula (str): número de cédula
+    Returns:    
+        bool: True si es válido, False si no
+    """
     # Validar que la cédula sea solo números
     if not cedula.isdigit():
         print("❌ Error: la cédula debe contener solo números.")
@@ -22,6 +30,14 @@ def validar_cedula(cedula: str) -> bool:
 
 
 def main():
+    """ 
+    Este programa pide al usuario su número de cédula hasta que ingrese una válida.
+    
+    Args:
+        None
+    Returns:    
+        None
+    """
     while True:
         cedula = input("Ingrese su número de cédula: ")
         if validar_cedula(cedula):
