@@ -13,8 +13,12 @@ from tkinter import simpledialog, messagebox
 
 def pedir_entero(mensaje: str) -> int:
     """
-    Es
+    Esta funcion sirve para validar si el numero es menor a 0 y si tiene otros caracteres diferentes a numeros 
     
+    Args: 
+        mensaje (str): Mensaje que se muestra en el cuadro de dialogo
+    Returns:
+        int: Numero entero mayor a 0
     
     """
     while True:
@@ -29,7 +33,12 @@ def pedir_entero(mensaje: str) -> int:
             messagebox.showwarning("Error", "Debe ingresar un número entero válido (sin letras ni símbolos).")
 
 def pedir_float(mensaje: str) -> float:
-    """Pide un número decimal >= 0 (nota)."""
+    """Esta funcion sirve para validar si el numero es menor a 0 y si tiene otros caracteres diferentes a numeros
+    Args:
+        mensaje (str): Mensaje que se muestra en el cuadro de dialogo
+    Returns:
+        float: Numero flotante mayor o igual a 0
+    """
     while True:
         valor = simpledialog.askstring("Entrada", mensaje)
         try:
@@ -42,6 +51,13 @@ def pedir_float(mensaje: str) -> float:
             messagebox.showwarning("Error", "Debe ingresar un número válido (ejemplo: 3 o 3.5).")
 
 def main():
+    """ 
+    Esta funcion sirve para pedir al usuario la cantidad de estudiantes y calcular el promedio de cada uno de ellos
+    
+    Args: 
+        None    
+    Returns:
+    """
     root = tk.Tk()
     root.withdraw()  # Oculta ventana principal
 
